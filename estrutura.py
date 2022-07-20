@@ -246,6 +246,6 @@ banco_dados.pushButton_5.clicked.connect(visualizar_dados)
 alterar.pushButton.clicked.connect(salvar_alterar_dados)
 
 
-formulario.show()
+visualizar_dados()
 app.exec()
 

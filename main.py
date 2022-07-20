@@ -7,7 +7,7 @@ import mysql.connector
 from pip import main
 from reportlab.pdfgen import canvas
 from tkinter import *
-from subprocess import call
+import inicial
 
 cnx = mysql.connector.connect(
     host="localhost",
@@ -38,8 +38,9 @@ def checagem_dados(self):
         data = resultado[0][2]
         email = resultado[0][1]
         QMessageBox.information(QMessageBox(), "Sistema YanCode", "Você foi logado com sucesso, seja Bem-Vindo {} ao sistema!".format(nome))
+        inicial.inicial_tela(nome, email, str(data))
         login.close()
-        call(["python", "estrutura.py"])
+        
 
     else:
         msg = QMessageBox()
